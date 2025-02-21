@@ -3,6 +3,57 @@
 Notable changes to this project are documented in this changelog.  
 This project adheres to the [semantic versioning] specification.
 
+## [2.0.0](https://github.com/gemini/terraform-aws-oidc-github/compare/v1.8.1...v2.0.0) (2025-02-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* Rename default IAM role to GitHubActions ([#77](https://github.com/gemini/terraform-aws-oidc-github/issues/77))
+* Remove the enabled variable ([#76](https://github.com/gemini/terraform-aws-oidc-github/issues/76))
+* Replace Apache-2.0 with the MIT license ([#74](https://github.com/gemini/terraform-aws-oidc-github/issues/74))
+* Increase the minimum required versions ([#73](https://github.com/gemini/terraform-aws-oidc-github/issues/73))
+* Rename the attach_admin_policy variable ([#72](https://github.com/gemini/terraform-aws-oidc-github/issues/72))
+* Change the attach_read_only_policy default ([#71](https://github.com/gemini/terraform-aws-oidc-github/issues/71))
+
+### New features
+
+* Begin automating the release process ([#42](https://github.com/gemini/terraform-aws-oidc-github/issues/42)) ([c9493af](https://github.com/gemini/terraform-aws-oidc-github/commit/c9493aff293beb6797da347ca282bd3f0d9913c3))
+* Support non-default AWS partitions ([#65](https://github.com/gemini/terraform-aws-oidc-github/issues/65)) ([801d242](https://github.com/gemini/terraform-aws-oidc-github/commit/801d24208abb4547c695c7b38545d3b9142d4dbf))
+
+
+### Bug fixes
+
+* Allow wildcards in the repository variable ([#62](https://github.com/gemini/terraform-aws-oidc-github/issues/62)) ([4c6db5b](https://github.com/gemini/terraform-aws-oidc-github/commit/4c6db5bf685fca239fa0e5992b51892000883cfc))
+* Swap deprecated inline_policy block for aws_iam_role_policy ([#63](https://github.com/gemini/terraform-aws-oidc-github/issues/63)) ([a7b30ee](https://github.com/gemini/terraform-aws-oidc-github/commit/a7b30ee6c2285e958be48cd21f69d147361abfe0))
+
+
+### Miscellaneous
+
+* Automatically upgrade workflow dependencies ([#48](https://github.com/gemini/terraform-aws-oidc-github/issues/48)) ([be2be58](https://github.com/gemini/terraform-aws-oidc-github/commit/be2be58ee1099200738ef947082607056a16ee73))
+* Bump aws-actions/configure-aws-credentials from 2 to 4 ([#50](https://github.com/gemini/terraform-aws-oidc-github/issues/50)) ([0f5075d](https://github.com/gemini/terraform-aws-oidc-github/commit/0f5075dd79665395e8cc0f82432c8f0e03f9d34d))
+* bump github/codeql-action from 2 to 3 ([#49](https://github.com/gemini/terraform-aws-oidc-github/issues/49)) ([6cbdace](https://github.com/gemini/terraform-aws-oidc-github/commit/6cbdaceb66b5ebc06ae3ba2660c58f78748f6301))
+* Bump README version for 1.8.1 ([5d9d8cd](https://github.com/gemini/terraform-aws-oidc-github/commit/5d9d8cdccef1cd29f37d0384ff0ac05198aab817))
+* Bump slackapi/slack-github-action from 1.18.0 to 1.25.0 ([#51](https://github.com/gemini/terraform-aws-oidc-github/issues/51)) ([5093c20](https://github.com/gemini/terraform-aws-oidc-github/commit/5093c2023bf0b148f2c4b769b43f6f3dae3d55ff))
+* Bump slackapi/slack-github-action from 1.25.0 to 1.26.0 ([#53](https://github.com/gemini/terraform-aws-oidc-github/issues/53)) ([5962e07](https://github.com/gemini/terraform-aws-oidc-github/commit/5962e07265407e8c70c95dd20a917ff1b12aa712))
+* Bump slackapi/slack-github-action from 1.26.0 to 1.27.0 ([#59](https://github.com/gemini/terraform-aws-oidc-github/issues/59)) ([568aedf](https://github.com/gemini/terraform-aws-oidc-github/commit/568aedfd3a7cc97dc05dc424802453fdba13571a))
+* Bump slackapi/slack-github-action from 1.27.0 to 2.0.0 ([#61](https://github.com/gemini/terraform-aws-oidc-github/issues/61)) ([7451536](https://github.com/gemini/terraform-aws-oidc-github/commit/7451536877cc1238477a98c00cd4970e62df7b72))
+* Change the attach_read_only_policy default ([#71](https://github.com/gemini/terraform-aws-oidc-github/issues/71)) ([c997cb9](https://github.com/gemini/terraform-aws-oidc-github/commit/c997cb9e3a22485778706fb5af273164e44bb3dd))
+* Increase max_line_length to 120 characters ([#70](https://github.com/gemini/terraform-aws-oidc-github/issues/70)) ([e6edce5](https://github.com/gemini/terraform-aws-oidc-github/commit/e6edce5fab4d2142b71f96805e8dd8047b7145e0))
+* Increase the minimum required versions ([#73](https://github.com/gemini/terraform-aws-oidc-github/issues/73)) ([395b8b1](https://github.com/gemini/terraform-aws-oidc-github/commit/395b8b1ce2eb9e4efe839d912c27f607f85b5366))
+* Release v1.8.0 ([#47](https://github.com/gemini/terraform-aws-oidc-github/issues/47)) ([80358ac](https://github.com/gemini/terraform-aws-oidc-github/commit/80358ac71bcbb49dd5807486682a2b1d81cdf15c))
+* Release v1.8.1 ([#56](https://github.com/gemini/terraform-aws-oidc-github/issues/56)) ([f664e8f](https://github.com/gemini/terraform-aws-oidc-github/commit/f664e8f6002b11b5c206f1fb3cf0377ea6a033ae))
+* Remove known thumbprints ([#52](https://github.com/gemini/terraform-aws-oidc-github/issues/52)) ([c0b2178](https://github.com/gemini/terraform-aws-oidc-github/commit/c0b2178bc74e49dcc9c2330651f0e866f25b762c))
+* Remove the cron workflow ([#69](https://github.com/gemini/terraform-aws-oidc-github/issues/69)) ([10f3f5a](https://github.com/gemini/terraform-aws-oidc-github/commit/10f3f5a5bede332f00f4fb2b8757b34e610dd213))
+* Remove the enabled variable ([#76](https://github.com/gemini/terraform-aws-oidc-github/issues/76)) ([03185e5](https://github.com/gemini/terraform-aws-oidc-github/commit/03185e591d9044e65196ffcdf1afbe6026c4b564))
+* Rename default IAM role to GitHubActions ([#77](https://github.com/gemini/terraform-aws-oidc-github/issues/77)) ([29a447d](https://github.com/gemini/terraform-aws-oidc-github/commit/29a447de7230e3c089d1053fa60a744b908358fc))
+* Rename the attach_admin_policy variable ([#72](https://github.com/gemini/terraform-aws-oidc-github/issues/72)) ([f0aaed4](https://github.com/gemini/terraform-aws-oidc-github/commit/f0aaed44627da39a2654fcb523acee9be7323b4a))
+* Replace Apache-2.0 with the MIT license ([#74](https://github.com/gemini/terraform-aws-oidc-github/issues/74)) ([54470d2](https://github.com/gemini/terraform-aws-oidc-github/commit/54470d25bf0104e1ee405f319f473559c917e8d9))
+* Set the first automated release version ([#44](https://github.com/gemini/terraform-aws-oidc-github/issues/44)) ([cc3ded5](https://github.com/gemini/terraform-aws-oidc-github/commit/cc3ded5d0b5bb0cd615ac8202b3d99bbc50735d2))
+* Set the previous version in the manifest ([#46](https://github.com/gemini/terraform-aws-oidc-github/issues/46)) ([cb4b7c9](https://github.com/gemini/terraform-aws-oidc-github/commit/cb4b7c9ab3bd00ab35541e23417e145c62082802))
+* Split workflows and simplify testing ([#67](https://github.com/gemini/terraform-aws-oidc-github/issues/67)) ([7cbbdbd](https://github.com/gemini/terraform-aws-oidc-github/commit/7cbbdbd7837fc47554468dbc7ce20d3504c43ac3))
+* Update release-please-action organisation ([#55](https://github.com/gemini/terraform-aws-oidc-github/issues/55)) ([6a67a48](https://github.com/gemini/terraform-aws-oidc-github/commit/6a67a48bf466eb0a0820c90a4753aa205a6b0230))
+* Update version numbers in the README ([#54](https://github.com/gemini/terraform-aws-oidc-github/issues/54)) ([b6416b8](https://github.com/gemini/terraform-aws-oidc-github/commit/b6416b85cd33adcd7c7b75d53e0e7cb77a37a03f))
+
 ## [1.8.1](https://github.com/unfunco/terraform-aws-oidc-github/compare/v1.8.0...v1.8.1) (2024-12-29)
 
 ### Bug fixes
